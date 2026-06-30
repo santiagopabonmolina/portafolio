@@ -1,0 +1,19 @@
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar de Santiago Pavón">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F3D3E"/>
+      <stop offset="100%" stop-color="#163E3F"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D97D3D"/>
+      <stop offset="100%" stop-color="#3FA9A0"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="28" fill="url(#bg)"/>
+  <circle cx="160" cy="160" r="118" fill="none" stroke="url(#ring)" stroke-width="2" stroke-dasharray="4 10" opacity="0.5"/>
+  <!-- silueta minimal -->
+  <circle cx="160" cy="132" r="46" fill="#E9E6DC"/>
+  <path d="M70 268c8-54 46-86 90-86s82 32 90 86" fill="#E9E6DC"/>
+  <!-- marca de "código" -->
+  <text x="160" y="300" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" fill="#D97D3D" opacity="0.85">&lt;dev/&gt;</text>
+</svg>

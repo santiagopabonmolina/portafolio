@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santiago Pabón · Fullstack en desarrollo</title>
+  <meta name="description" content="Portafolio de Santiago Pabón, Backend Developer especializado en Python, JavaScript y MySQL.">
+
+  <!-- Favicon ligero en línea, sin petición HTTP extra -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%230F3D3E%22/><text x=%2212%22 y=%2217%22 font-family=%22monospace%2２ font-size=%２２14%２２ fill=%２２%２3D97D3D%２２ text-anchor=%２２middle%２２>S</text></svg}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="#hero" class="navbar__brand">santiago<span class="accent">.dev</span></a>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro">
+          <img src="assets/icons/sun.svg" alt="" class="icon icon--sun">
+          <img src="assets/icons/moon.svg" alt="" class="icon icon--moon">
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <p class="eyebrow fade-up">Hola, soy</p>
+        <h1 class="hero__title fade-up">Santiago Pabón</h1>
+        <p class="hero__role fade-up">fullstack Developer</p>
+        <p class="hero__stack fade-up">
+          <span class="mono">Python</span> · <span class="mono">JavaScript</span> · <span class="mono">MySQL</span>
+        </p>
+        <p class="hero__desc fade-up">
+          Construyo sistemas backend sólidos y automatizaciones que resuelven problemas reales:
+          desde modelos de bases de datos relacionales hasta flujos inteligentes con n8n.
+        </p>
+        <div class="hero__actions fade-up">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+        </div>
+      </div>
+
+      <div class="hero__visual fade-up">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <img src="assets/images/avatar.png" alt="Avatar de Santiago Pabón" class="hero__avatar" width="320" height="320" loading="eager">
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="section about" id="sobre-mi">
+      <div class="section__head fade-up">
+        <span class="eyebrow">01 · Quién soy</span>
+        <h2>Sobre mí</h2>
+      </div>
+      <p class="about__text fade-up">
+        Soy estudiante de Desarrollo Full Stack en Campusland, enfocado en el lado backend:
+        diseño de bases de datos, lógica de servidor y automatización de procesos.
+        Me interesa entender a fondo cómo se mueven los datos dentro de un sistema y
+        construir soluciones que sean claras, escalables y fáciles de mantener.
+        Disfruto los retos técnicos que combinan lógica, estructura y resultados medibles.
+      </p>
+    </section>
+
+    <!-- ===== TECNOLOGÍAS ===== -->
+    <section class="section tech" id="tecnologias">
+      <div class="section__head fade-up">
+        <span class="eyebrow">02 · Stack</span>
+        <h2>Tecnologías</h2>
+      </div>
+
+      <ul class="tech__grid">
+        <li class="tech__badge fade-up">Python</li>
+        <li class="tech__badge fade-up">JavaScript</li>
+        <li class="tech__badge fade-up">HTML</li>
+        <li class="tech__badge fade-up">CSS</li>
+        <li class="tech__badge fade-up">MySQL</li>
+        <li class="tech__badge fade-up">Git</li>
+        <li class="tech__badge fade-up">GitHub</li>
+        <li class="tech__badge fade-up">Linux</li>
+        <li class="tech__badge fade-up">Scrum</li>
+      </ul>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section class="section projects" id="proyectos">
+      <div class="section__head fade-up">
+        <span class="eyebrow">03 · Trabajo</span>
+        <h2>Proyectos</h2>
+      </div>
+
+      <div class="projects__grid">
+
+        <article class="project-card fade-up">
+          <img src="assets/images/hospitalario.svg" alt="Vista previa del Sistema project-sound" class="project-card__img" loading="lazy" width="640" height="400">
+           <div class="project-card__body">
+            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'project-sound';</p>
+            <h3>reproductor de musica</h3>
+            <p>Gestión de albums, musicas y artistas.</p>
+            <ul class="project-card__tags">
+              <li>HTML</li><li>Python</li><li>JavaScript</li>
+            </ul>
+            <div class="project-card__actions">
+              <a href="https://github.com/JhonHenryReyesPerez/los-psicoactivos-sounds.git" class="btn btn--small btn--ghost" target="_blank" >GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <img src="assets/images/pizzeria.svg" alt="Vista previa del Sistema de Pizzería" class="project-card__img" loading="lazy" width="640" height="400">
+          <div class="project-card__body">
+            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'pizzeria';</p>
+            <h3>Sistema de Pizzería</h3>
+            <p>Modelo relacional de 9 tablas con DDL completo, datos de prueba y más de 20 consultas SQL resueltas para gestión de pedidos.</p>
+            <ul class="project-card__tags">
+              <li>MySQL</li><li>SQL</li><li>Docker</li>
+            </ul>
+            <div class="project-card__actions">
+              <a href="#" class="btn btn--small btn--ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <img src="assets/images/crud-empleados.svg" alt="Vista previa del CRUD de Empleados" class="project-card__img" loading="lazy" width="640" height="400">
+          <div class="project-card__body">
+            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'crud_empleados';</p>
+            <h3>CRUD de Empleados</h3>
+            <p>Operaciones completas de creación, lectura, actualización y eliminación sobre una base de datos de empleados con validaciones del lado del servidor.</p>
+            <ul class="project-card__tags">
+              <li>Python</li><li>MySQL</li>
+            </ul>
+            <div class="project-card__actions">
+              <a href="#" class="btn btn--small btn--ghost">GitHub</a>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <img src="assets/images/n8n.svg" alt="Vista previa de la Automatización con n8n" class="project-card__img" loading="lazy" width="640" height="400">
+          <div class="project-card__body">
+            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'automatizacion_n8n';</p>
+            <h3>Automatización con n8n</h3>
+            <p>Flujo de trabajo que conecta webhooks, IA y lógica de negocio para automatizar procesos sin intervención manual.</p>
+            <ul class="project-card__tags">
+              <li>n8n</li><li>JavaScript</li><li>API</li>
+            </ul>
+            <div class="project-card__actions">
+              <a href="#" class="btn btn--small btn--ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== FORMACIÓN ===== -->
+    <section class="section education" id="formacion">
+      <div class="section__head fade-up">
+        <span class="eyebrow">04 · Formación</span>
+        <h2>Formación</h2>
+      </div>
+
+      <div class="education__card fade-up">
+        <p class="mono education__tag">en curso</p>
+        <h3>Desarrollo Full Stack —</h3>
+        <p>Campusland, Campus Bucaramanga</p>
+        <p class="education__desc">
+          Formación activa en desarrollo backend, diseño y modelado de bases de datos relacionales,
+          control de versiones con Git, entornos Linux y metodologías ágiles (Scrum).
+          Aplico lo aprendido en proyectos reales que combinan lógica de servidor con automatización.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section contact" id="contacto">
+      <div class="section__head fade-up">
+        <span class="eyebrow">05 · Hablemos</span>
+        <h2>Contacto</h2>
+        <p class="contact__lead">¿Tienes un proyecto en mente o una oportunidad? Escríbeme.</p>
+      </div>
+
+      <ul class="contact__grid fade-up">
+        <li>
+          <a href="https://github.com/santiagopabonmolina/" target="_blank" rel="noopener noreferrer" class="contact__item">
+            <img src="assets/icons/github.svg" alt="" class="icon">
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:santy122324@gmail.com" class="contact__item">
+            <img src="assets/icons/mail.svg" alt="" class="icon">
+            <span>Correo</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/315 4189394" target="_blank" rel="noopener noreferrer" class="contact__item">
+            <img src="assets/icons/whatsapp.svg" alt="" class="icon">
+            <span>WhatsApp</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Santiago Pabón. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <img src="assets/icons/arrow-up.svg" alt="">
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
