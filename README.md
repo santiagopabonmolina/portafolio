@@ -1,4 +1,4 @@
-# Santiago Pavón — Portafolio
+# Santiago Pabón — Portafolio
 
 Portafolio profesional de una sola página construido con **HTML5, CSS3 y JavaScript puro (Vanilla JS)**, sin frameworks ni librerías externas.
 
