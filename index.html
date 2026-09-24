@@ -2,41 +2,74 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santiago Pabón · Fullstack en desarrollo</title>
-  <meta name="description" content="Portafolio de Santiago Pabón, Backend Developer especializado en Python, JavaScript y MySQL.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Santiago Pabón Molina · Desarrollador Full Stack & Soluciones de Software</title>
+  <meta name="description" content="Portafolio profesional de Santiago Pabón Molina. Desarrollador Full Stack especializado en arquitectura backend, Java SE 21, Python, bases de datos MySQL y automatización inteligente con n8n e IA.">
+  <meta name="author" content="Santiago Pabón Molina">
+  <meta name="theme-color" content="#FAF8F5" id="metaThemeColor">
 
-  <!-- Favicon ligero en línea, sin petición HTTP extra -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%230F3D3E%22/><text x=%2212%22 y=%2217%22 font-family=%22monospace%2２ font-size=%２２14%２２ fill=%２２%２3D97D3D%２２ text-anchor=%２２middle%２２>S</text></svg}">
+  <!-- Favicon SVG en línea con monograma y colores del diseño (Azul Marino Índigo & Terracota) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%231B365D%22/><text x=%2212%22 y=%2217%22 font-family=%22system-ui,-apple-system,sans-serif%22 font-weight=%22700%22 font-size=%2213%22 fill=%22%23C85A32%22 text-anchor=%22middle%22>S</text></svg>">
 
+  <!-- Google Fonts: Space Grotesk (Editorial/Títulos), Inter (Lectura), JetBrains Mono (Técnico) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Barra de progreso interactiva en el tope -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <nav class="navbar__inner">
-      <a href="#hero" class="navbar__brand">santiago<span class="accent">.dev</span></a>
+      <a href="#hero" class="navbar__brand" aria-label="Inicio">
+        <span class="brand-badge">SP</span>
+        <span class="brand-text">santiago<span class="accent">.pabon</span></span>
+      </a>
 
       <ul class="navbar__links" id="navLinks">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#hero">Identidad</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#respaldo">Respaldo</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#formacion">Formación</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
 
       <div class="navbar__actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro">
-          <img src="assets/icons/sun.svg" alt="" class="icon icon--sun">
-          <img src="assets/icons/moon.svg" alt="" class="icon icon--moon">
+        <!-- Botón rápido Descargar CV en Navbar -->
+        <a href="assets/docs/Hoja_de_vida_Santiago_Pabon.pdf" download="Hoja_de_vida_Santiago_Pabon.pdf" class="btn btn--small btn--ghost nav-cv-btn" title="Descargar Hoja de Vida en PDF">
+          <svg class="icon icon--btn" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>CV</span>
+        </a>
+
+        <!-- Alternador de Tema Claro / Oscuro -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro y oscuro" title="Cambiar tema">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
         </button>
 
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <!-- Botón Menú Móvil -->
+        <button class="hamburger" id="hamburger" aria-label="Alternar menú de navegación" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -44,196 +77,1190 @@
   </header>
 
   <main>
-    <!-- ===== HERO ===== -->
+    <!-- ========================================================
+         CAPA 1: IDENTIDAD PROFESIONAL (HERO & SUPERPODER)
+         ======================================================== -->
     <section class="hero" id="hero">
-      <div class="hero__content">
-        <p class="eyebrow fade-up">Hola, soy</p>
-        <h1 class="hero__title fade-up">Santiago Pabón</h1>
-        <p class="hero__role fade-up">fullstack Developer</p>
-        <p class="hero__stack fade-up">
-          <span class="mono">Python</span> · <span class="mono">JavaScript</span> · <span class="mono">MySQL</span>
-        </p>
-        <p class="hero__desc fade-up">
-          Construyo sistemas backend sólidos y automatizaciones que resuelven problemas reales:
-          desde modelos de bases de datos relacionales hasta flujos inteligentes con n8n.
-        </p>
-        <div class="hero__actions fade-up">
-          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+      <div class="hero__grid">
+        <div class="hero__content">
+          <!-- Badge de disponibilidad en Azul Marino Índigo -->
+          <div class="status-badge fade-up">
+            <span class="status-badge__dot"></span>
+            <span>Disponible para nuevos proyectos & desarrollo tecnológico</span>
+          </div>
+
+          <h1 class="hero__title fade-up">
+            Santiago Pabón <span class="hero__surname">Molina</span>
+          </h1>
+
+          <p class="hero__role fade-up">
+            Desarrollador Full Stack <span class="role-separator">·</span> <span class="role-highlight">Arquitectura Backend & Automatización</span>
+          </p>
+
+          <p class="hero__desc fade-up">
+            Especializado en diseñar <strong>sistemas backend robustos</strong> en Java y Python, optimizar modelos de datos relacionales en MySQL y construir <strong>automatizaciones inteligentes</strong> con n8n e IA. Enfoque analítico para transformar necesidades complejas en código limpio, escalable y medible.
+          </p>
+
+          <!-- Stack principal en monoespaciada interactiva -->
+          <div class="hero__stack-pills fade-up">
+            <span class="pill mono" data-tech="java">Java SE 21</span>
+            <span class="pill mono" data-tech="python">Python</span>
+            <span class="pill mono" data-tech="mysql">MySQL 8.0</span>
+            <span class="pill mono" data-tech="n8n">n8n & AI</span>
+            <span class="pill mono" data-tech="js">JavaScript</span>
+            <span class="pill mono" data-tech="git">Git / Linux</span>
+          </div>
+
+          <!-- Acciones Principales con CTA destacado para Descargar CV -->
+          <div class="hero__actions fade-up">
+            <a href="assets/docs/Hoja_de_vida_Santiago_Pabon.pdf" download="Hoja_de_vida_Santiago_Pabon.pdf" class="btn btn--primary btn--cta" id="heroCvBtn">
+              <svg class="icon icon--btn" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>Descargar CV</span>
+              <span class="btn__badge">PDF</span>
+            </a>
+
+            <a href="#proyectos" class="btn btn--secondary">
+              <span>Explorar Proyectos</span>
+              <svg class="icon icon--arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+
+            <a href="https://wa.me/573154189394?text=Hola%20Santiago,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--whatsapp-quick" title="Escribirme directamente por WhatsApp">
+              <svg class="icon icon--btn" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 .8C5.8.8.8 5.8.8 12c0 2.1.6 4.1 1.6 5.8L.8 23.2l5.6-1.5A11.1 11.1 0 0 0 12 23.2c6.2 0 11.2-5 11.2-11.2S18.2.8 12 .8zm0 20.3c-1.9 0-3.6-.5-5.2-1.4l-.4-.2-3.3.9.9-3.2-.2-.4A9.2 9.2 0 1 1 21.2 12 9.2 9.2 0 0 1 12 21.1zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.2-.6.9-.8 1-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.3-.5-.3h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.5 2.3 3.7 3.1 2.2.8 2.2.6 2.6.5.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1z"/>
+              </svg>
+              <span>Hablemos</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Fotografía de perfil profesional interactiva (Tilt 3D & Spotlight) -->
+        <div class="hero__visual fade-up">
+          <div class="avatar-card interactive-spotlight" id="avatarCard">
+            <div class="avatar-card__halo" aria-hidden="true"></div>
+            <div class="avatar-card__frame">
+              <img src="assets/images/1785155876226.png" alt="Fotografía de perfil de Santiago Pabón Molina" class="avatar-card__image" width="220" height="220" loading="eager">
+            </div>
+            <div class="avatar-card__caption">
+              <p class="caption__name">Santiago Pabón M.</p>
+              <p class="caption__tag mono">Fullstack & Backend Dev</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="hero__visual fade-up">
-        <div class="hero__glow" aria-hidden="true"></div>
-        <img src="assets/images/avatar.png" alt="Avatar de Santiago Pabón" class="hero__avatar" width="320" height="320" loading="eager">
+      <!-- TRES INSIGNIAS DINÁMICAS: MISIÓN, VISIÓN Y VALORES -->
+      <div class="hero__pillars-wrapper fade-up">
+        <div class="pillars__grid">
+          <!-- Tarjeta 1: Misión -->
+          <article class="pillar-card interactive-spotlight">
+            <div class="pillar-card__header">
+              <div class="pillar-card__icon-box pillar-card__icon-box--mission" title="Rumbo y Misión Técnica">
+                <!-- Icono de diana / retícula de precisión técnica y foco en resultados -->
+                <svg class="pillar-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="22" y1="12" x2="18" y2="12"/>
+                  <line x1="6" y1="12" x2="2" y2="12"/>
+                  <line x1="12" y1="6" x2="12" y2="2"/>
+                  <line x1="12" y1="22" x2="12" y2="18"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <div class="pillar-card__meta">
+                <span class="pillar-card__num mono">01</span>
+                <span class="pillar-card__tag mono">Propósito</span>
+              </div>
+            </div>
+            <h2 class="pillar-card__title">Misión</h2>
+            <p class="pillar-card__desc">
+              Diseñar e implementar <strong>arquitecturas de software confiables</strong>, modelos relacionales íntegros y flujos de automatización que resuelvan cuellos de botella reales en negocios y equipos, priorizando siempre la simplicidad técnica, la mantenibilidad y el rendimiento.
+            </p>
+          </article>
+
+          <!-- Tarjeta 2: Visión -->
+          <article class="pillar-card interactive-spotlight">
+            <div class="pillar-card__header">
+              <div class="pillar-card__icon-box pillar-card__icon-box--vision" title="Visión y Perspectiva">
+                <!-- Icono de brújula de rumbo y navegación estratégica a futuro -->
+                <svg class="pillar-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+              </div>
+              <div class="pillar-card__meta">
+                <span class="pillar-card__num mono">02</span>
+                <span class="pillar-card__tag mono">Horizonte</span>
+              </div>
+            </div>
+            <h2 class="pillar-card__title">Visión</h2>
+            <p class="pillar-card__desc">
+              Consolidarme como un <strong>ingeniero de software referente</strong> en el ecosistema backend y cloud, liderando la construcción de soluciones críticas, sistemas distribuidos de alto volumen y la convergencia práctica entre flujos de desarrollo tradicional y modelos de Inteligencia Artificial.
+            </p>
+          </article>
+
+          <!-- Tarjeta 3: Valores -->
+          <article class="pillar-card interactive-spotlight">
+            <div class="pillar-card__header">
+              <div class="pillar-card__icon-box pillar-card__icon-box--values" title="Valores, Rigor y Fiabilidad">
+                <!-- Icono de escudo de verificación e integridad técnica -->
+                <svg class="pillar-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+              <div class="pillar-card__meta">
+                <span class="pillar-card__num mono">03</span>
+                <span class="pillar-card__tag mono">ADN Profesional</span>
+              </div>
+            </div>
+            <h2 class="pillar-card__title">Valores</h2>
+            <p class="pillar-card__desc">
+              <strong>Disciplina técnica</strong> en la estructuración de cada módulo, <strong>adaptabilidad</strong> para aprender e incorporar nuevas tecnologías con rapidez, empatía colaborativa en equipos ágiles y una profunda vocación de mejora continua orientada a la excelencia.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ===== SOBRE MÍ ===== -->
-    <section class="section about" id="sobre-mi">
+    <!-- ========================================================
+         CAPA 2: SERVICIOS ESTRELLA (LO QUE OFREZCO & RESPALDO)
+         ======================================================== -->
+    <section class="section services" id="servicios">
       <div class="section__head fade-up">
-        <span class="eyebrow">01 · Quién soy</span>
-        <h2>Sobre mí</h2>
-      </div>
-      <p class="about__text fade-up">
-        Soy estudiante de Desarrollo Full Stack en Campusland, enfocado en el lado backend:
-        diseño de bases de datos, lógica de servidor y automatización de procesos.
-        Me interesa entender a fondo cómo se mueven los datos dentro de un sistema y
-        construir soluciones que sean claras, escalables y fáciles de mantener.
-        Disfruto los retos técnicos que combinan lógica, estructura y resultados medibles.
-      </p>
-    </section>
-
-    <!-- ===== TECNOLOGÍAS ===== -->
-    <section class="section tech" id="tecnologias">
-      <div class="section__head fade-up">
-        <span class="eyebrow">02 · Stack</span>
-        <h2>Tecnologías</h2>
-      </div>
-
-      <ul class="tech__grid">
-        <li class="tech__badge fade-up">Python</li>
-        <li class="tech__badge fade-up">JavaScript</li>
-        <li class="tech__badge fade-up">HTML</li>
-        <li class="tech__badge fade-up">CSS</li>
-        <li class="tech__badge fade-up">MySQL</li>
-        <li class="tech__badge fade-up">Git</li>
-        <li class="tech__badge fade-up">GitHub</li>
-        <li class="tech__badge fade-up">Linux</li>
-        <li class="tech__badge fade-up">Scrum</li>
-      </ul>
-    </section>
-
-    <!-- ===== PROYECTOS ===== -->
-    <section class="section projects" id="proyectos">
-      <div class="section__head fade-up">
-        <span class="eyebrow">03 · Trabajo</span>
-        <h2>Proyectos</h2>
-      </div>
-
-      <div class="projects__grid">
-
-        <article class="project-card fade-up">
-          <img src="assets/images/hospitalario.svg" alt="Vista previa del Sistema project-sound" class="project-card__img" loading="lazy" width="640" height="400">
-           <div class="project-card__body">
-            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'project-sound';</p>
-            <h3>reproductor de musica</h3>
-            <p>Gestión de albums, musicas y artistas.</p>
-            <ul class="project-card__tags">
-              <li>HTML</li><li>Python</li><li>JavaScript</li>
-            </ul>
-            <div class="project-card__actions">
-              <a href="https://github.com/JhonHenryReyesPerez/los-psicoactivos-sounds.git" class="btn btn--small btn--ghost" target="_blank" >GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card fade-up">
-          <img src="assets/images/pizzeria.svg" alt="Vista previa del Sistema de Pizzería" class="project-card__img" loading="lazy" width="640" height="400">
-          <div class="project-card__body">
-            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'pizzeria';</p>
-            <h3>Sistema de Pizzería</h3>
-            <p>Modelo relacional de 9 tablas con DDL completo, datos de prueba y más de 20 consultas SQL resueltas para gestión de pedidos.</p>
-            <ul class="project-card__tags">
-              <li>MySQL</li><li>SQL</li><li>Docker</li>
-            </ul>
-            <div class="project-card__actions">
-              <a href="#" class="btn btn--small btn--ghost">GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card fade-up">
-          <img src="assets/images/crud-empleados.svg" alt="Vista previa del CRUD de Empleados" class="project-card__img" loading="lazy" width="640" height="400">
-          <div class="project-card__body">
-            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'crud_empleados';</p>
-            <h3>CRUD de Empleados</h3>
-            <p>Operaciones completas de creación, lectura, actualización y eliminación sobre una base de datos de empleados con validaciones del lado del servidor.</p>
-            <ul class="project-card__tags">
-              <li>Python</li><li>MySQL</li>
-            </ul>
-            <div class="project-card__actions">
-              <a href="#" class="btn btn--small btn--ghost">GitHub</a>
-
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card fade-up">
-          <img src="assets/images/n8n.svg" alt="Vista previa de la Automatización con n8n" class="project-card__img" loading="lazy" width="640" height="400">
-          <div class="project-card__body">
-            <p class="project-card__query mono">SELECT * FROM proyectos WHERE nombre = 'automatizacion_n8n';</p>
-            <h3>Automatización con n8n</h3>
-            <p>Flujo de trabajo que conecta webhooks, IA y lógica de negocio para automatizar procesos sin intervención manual.</p>
-            <ul class="project-card__tags">
-              <li>n8n</li><li>JavaScript</li><li>API</li>
-            </ul>
-            <div class="project-card__actions">
-              <a href="#" class="btn btn--small btn--ghost">GitHub</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ===== FORMACIÓN ===== -->
-    <section class="section education" id="formacion">
-      <div class="section__head fade-up">
-        <span class="eyebrow">04 · Formación</span>
-        <h2>Formación</h2>
-      </div>
-
-      <div class="education__card fade-up">
-        <p class="mono education__tag">en curso</p>
-        <h3>Desarrollo Full Stack —</h3>
-        <p>Campusland, Campus Bucaramanga</p>
-        <p class="education__desc">
-          Formación activa en desarrollo backend, diseño y modelado de bases de datos relacionales,
-          control de versiones con Git, entornos Linux y metodologías ágiles (Scrum).
-          Aplico lo aprendido en proyectos reales que combinan lógica de servidor con automatización.
+        <span class="eyebrow">Capa 02 · Capacidades Clave</span>
+        <h2 class="section__title">Servicios Estrella</h2>
+        <p class="section__subtitle">
+          Soluciones integrales de ingeniería de software enfocadas en escalabilidad, consistencia de datos y productividad operativa.
         </p>
       </div>
-    </section>
 
-    <!-- ===== CONTACTO ===== -->
-    <section class="section contact" id="contacto">
-      <div class="section__head fade-up">
-        <span class="eyebrow">05 · Hablemos</span>
-        <h2>Contacto</h2>
-        <p class="contact__lead">¿Tienes un proyecto en mente o una oportunidad? Escríbeme.</p>
+      <!-- Cuadrícula de Tarjetas Interactivas de Servicios -->
+      <div class="services__grid">
+        <!-- Servicio 1: Arquitectura Backend & Java -->
+        <article class="service-card interactive-spotlight fade-up">
+          <div class="service-card__icon">
+            <!-- Servidor Rack de Alta Disponibilidad -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/>
+              <line x1="6" y1="18" x2="6.01" y2="18"/>
+              <path d="M18 6h-4"/>
+              <path d="M18 18h-4"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Arquitectura Backend & Lógica Robusta</h3>
+          <p class="service-card__desc">
+            Desarrollo de servicios centrales en <strong>Java SE 21 puro</strong> y <strong>Python</strong>. Implementación estricta de patrones de arquitectura (MVC, DAO), gestión de concurrencia nativa con <span class="mono">ExecutorService</span>, transacciones JDBC manuales y APIs modulares desacopladas de frameworks innecesarios.
+          </p>
+          <ul class="service-card__features">
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Patrones arquitectónicos MVC + DAO</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Concurrencia nativa y multihilo</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Conexión nativa JDBC & transaccionalidad segura</span>
+            </li>
+          </ul>
+          <div class="service-card__tags">
+            <span class="tag">Java SE 21</span>
+            <span class="tag">Python</span>
+            <span class="tag">JDBC</span>
+            <span class="tag">MVC / DAO</span>
+          </div>
+        </article>
+
+        <!-- Servicio 2: Bases de Datos & SQL Avanzado -->
+        <article class="service-card interactive-spotlight fade-up">
+          <div class="service-card__icon">
+            <!-- Clúster de Base de Datos Relacional -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="15" x2="12" y2="19"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Bases de Datos & Optimización SQL</h3>
+          <p class="service-card__desc">
+            Modelado relacional DDL y DML estructurado con normalización avanzada. Programación de <strong>procedimientos almacenados</strong>, disparadores (<span class="mono">triggers</span>), funciones determinísticas y eventos automáticos en MySQL. Análisis de planes de ejecución con <span class="mono">EXPLAIN</span> para garantizar consultas de alto rendimiento.
+          </p>
+          <ul class="service-card__features">
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Normalización de entidades y claves foráneas</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Stored procedures, triggers y eventos periódicos</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Optimización de índices y planes de consulta EXPLAIN</span>
+            </li>
+          </ul>
+          <div class="service-card__tags">
+            <span class="tag">MySQL 8.0</span>
+            <span class="tag">SQL DDL/DML</span>
+            <span class="tag">Triggers</span>
+            <span class="tag">Stored Procedures</span>
+          </div>
+        </article>
+
+        <!-- Servicio 3: Automatización con n8n e Inteligencia Artificial -->
+        <article class="service-card interactive-spotlight fade-up">
+          <div class="service-card__icon">
+            <!-- Chip Procesador Neuronal / Nodo IA -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+              <line x1="9" y1="1" x2="9" y2="4"/>
+              <line x1="15" y1="1" x2="15" y2="4"/>
+              <line x1="9" y1="20" x2="9" y2="23"/>
+              <line x1="15" y1="20" x2="15" y2="23"/>
+              <line x1="20" y1="9" x2="23" y2="9"/>
+              <line x1="20" y1="15" x2="23" y2="15"/>
+              <line x1="1" y1="9" x2="4" y2="9"/>
+              <line x1="1" y1="15" x2="4" y2="15"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Automatización Inteligente & Agentes IA</h3>
+          <p class="service-card__desc">
+            Construcción de flujos automatizados de extremo a extremo utilizando <strong>n8n</strong>, Webhooks HTTP y lógica personalizada en JavaScript. Integración de agentes conversacionales con LLMs (OpenRouter), persistencia automática en Google Sheets y orquestación con bots de Telegram con memoria contextual.
+          </p>
+          <ul class="service-card__features">
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Orquestación de pipelines automatizados con n8n</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Integración de Webhooks y APIs RESTful</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Bots de Telegram con agentes de IA y memoria de sesión</span>
+            </li>
+          </ul>
+          <div class="service-card__tags">
+            <span class="tag">n8n Workflows</span>
+            <span class="tag">OpenRouter AI</span>
+            <span class="tag">Telegram Bot</span>
+            <span class="tag">Webhooks</span>
+          </div>
+        </article>
+
+        <!-- Servicio 4: Diseño Frontend Moderno & UI/UX -->
+        <article class="service-card interactive-spotlight fade-up">
+          <div class="service-card__icon">
+            <!-- Ventana de Inspector Web & Componentes UI -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+              <line x1="6" y1="7" x2="6.01" y2="7"/>
+              <line x1="9" y1="7" x2="9.01" y2="7"/>
+              <line x1="12" y1="7" x2="12.01" y2="7"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Diseño Web & Frontend Moderno</h3>
+          <p class="service-card__desc">
+            Creación de interfaces web atractivas, responsivas y accesibles. Aplicación de <strong>arquitectura CSS modular</strong> (BEM / componentes reutilizables), interacciones dinámicas en JavaScript moderno, animaciones fluidas y experiencias de usuario centradas en la claridad y la usabilidad.
+          </p>
+          <ul class="service-card__features">
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Diseño responsive adaptable a móvil, tablet y desktop</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Microinteracciones, transiciones fluidas y modo oscuro</span>
+            </li>
+            <li>
+              <svg class="check-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>HTML5 semántico, accesibilidad y cero dependencias pesadas</span>
+            </li>
+          </ul>
+          <div class="service-card__tags">
+            <span class="tag">HTML5 Semántico</span>
+            <span class="tag">CSS Modular</span>
+            <span class="tag">JavaScript ES6+</span>
+            <span class="tag">UI/UX</span>
+          </div>
+        </article>
       </div>
 
-      <ul class="contact__grid fade-up">
-        <li>
-          <a href="https://github.com/santiagopabonmolina/" target="_blank" rel="noopener noreferrer" class="contact__item">
-            <img src="assets/icons/github.svg" alt="" class="icon">
-            <span>GitHub</span>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:santy122324@gmail.com" class="contact__item">
-            <img src="assets/icons/mail.svg" alt="" class="icon">
-            <span>Correo</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://wa.me/315 4189394" target="_blank" rel="noopener noreferrer" class="contact__item">
-            <img src="assets/icons/whatsapp.svg" alt="" class="icon">
-            <span>WhatsApp</span>
-          </a>
-        </li>
-      </ul>
+      <!-- SECCIÓN / CINTA DE RESPALDO (FORMACIÓN ACADÉMICA Y CERTIFICACIONES) -->
+      <div class="endorsement" id="respaldo">
+        <div class="endorsement__header fade-up">
+          <span class="eyebrow">Acreditación & Fundamento</span>
+          <h3 class="endorsement__title">Cinta de Respaldo Académico & Técnico</h3>
+          <p class="endorsement__lead">
+            Mi formación se apoya en programas intensivos de ingeniería de software con énfasis en desarrollo práctico, buenas prácticas y proyectos orientados a entornos reales.
+          </p>
+        </div>
+
+        <div class="endorsement__cards-grid">
+          <!-- Certificación 1 -->
+          <div class="endorsement-card interactive-spotlight fade-up">
+            <div class="endorsement-card__badge-row">
+              <span class="status-pill status-pill--active mono">En Formación Activa</span>
+              <span class="endorsement-card__year mono">2025 - Presente</span>
+            </div>
+            <h4 class="endorsement-card__program">Técnico Laboral en Desarrollo de Software</h4>
+            <p class="endorsement-card__inst">Campuslands — Floridablanca / Bucaramanga</p>
+            <p class="endorsement-card__detail">
+              Programa de inmersión integral en lógica de programación, arquitectura backend, desarrollo orientado a objetos, diseño de bases de datos relacionales, control de versiones con Git/GitHub, entornos Linux y metodologías ágiles (Scrum).
+            </p>
+            <div class="endorsement-card__competencies">
+              <span class="mini-tag">Java SE</span>
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">MySQL</span>
+              <span class="mini-tag">Git / GitHub</span>
+              <span class="mini-tag">Scrum</span>
+            </div>
+          </div>
+
+          <!-- Certificación 2 -->
+          <div class="endorsement-card interactive-spotlight fade-up">
+            <div class="endorsement-card__badge-row">
+              <span class="status-pill mono">Especialización Práctica</span>
+              <span class="endorsement-card__year mono">Campuslands</span>
+            </div>
+            <h4 class="endorsement-card__program">Arquitectura Backend en Java Puro (Vanilla SE 21)</h4>
+            <p class="endorsement-card__inst">Laboratorios de Alta Exigencia Técnica</p>
+            <p class="endorsement-card__detail">
+              Profundización en programación estructurada sin frameworks intermediarios: separación de capas con MVC y DAO, conexiones JDBC seguras, gestión de hilos en segundo plano (<span class="mono">ExecutorService</span>) e I/O moderno con Java NIO.2.
+            </p>
+            <div class="endorsement-card__competencies">
+              <span class="mini-tag">Patrones MVC/DAO</span>
+              <span class="mini-tag">JDBC Transaccional</span>
+              <span class="mini-tag">Concurrencia</span>
+              <span class="mini-tag">NIO.2</span>
+            </div>
+          </div>
+
+          <!-- Certificación 3 -->
+          <div class="endorsement-card interactive-spotlight fade-up">
+            <div class="endorsement-card__badge-row">
+              <span class="status-pill mono">Automatización & IA</span>
+              <span class="endorsement-card__year mono">Proyectos Aplicados</span>
+            </div>
+            <h4 class="endorsement-card__program">Automatización de Flujos con n8n & Agentes LLM</h4>
+            <p class="endorsement-card__inst">Integración de Servicios y APIs</p>
+            <p class="endorsement-card__detail">
+              Implementación de flujos de trabajo inteligentes que unen Webhooks, validación de reglas de negocio en JavaScript, bases de datos en la nube y bots conversacionales con Inteligencia Artificial conectada a OpenRouter.
+            </p>
+            <div class="endorsement-card__competencies">
+              <span class="mini-tag">n8n</span>
+              <span class="mini-tag">Telegram Bot API</span>
+              <span class="mini-tag">OpenRouter AI</span>
+              <span class="mini-tag">Webhooks</span>
+            </div>
+          </div>
+
+          <!-- Certificación 4 -->
+          <div class="endorsement-card interactive-spotlight fade-up">
+            <div class="endorsement-card__badge-row">
+              <span class="status-pill mono">Educación Media</span>
+              <span class="endorsement-card__year mono">Graduado</span>
+            </div>
+            <h4 class="endorsement-card__program">Bachiller Técnico con Énfasis Académico</h4>
+            <p class="endorsement-card__inst">Colegio Técnico Vicente Azuero</p>
+            <p class="endorsement-card__detail">
+              Bases sólidas en ciencias exactas, lógica analítica, resolución sistemática de problemas y trabajo en equipo multidisciplinario.
+            </p>
+            <div class="endorsement-card__competencies">
+              <span class="mini-tag">Lógica Matemática</span>
+              <span class="mini-tag">Pensamiento Crítico</span>
+              <span class="mini-tag">Disciplina</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CAPA 3: PROYECTOS Y EVIDENCIA (RESULTADOS CON VERBOS DE ACCIÓN)
+         ======================================================== -->
+    <section class="section projects" id="proyectos">
+      <div class="section__head fade-up">
+        <span class="eyebrow">Capa 03 · Portafolio & Casos de Éxito</span>
+        <h2 class="section__title">Proyectos & Evidencia</h2>
+        <p class="section__subtitle">
+          Proyectos reales con estructura demostrable: contexto del reto, mi rol como desarrollador con verbos de acción y resultados tangibles de impacto.
+        </p>
+      </div>
+
+      <!-- Barra de Filtros Interactiva con Scroll Horizontal en Móviles -->
+      <div class="projects-filter-wrapper fade-up">
+        <div class="projects-filter" role="tablist" aria-label="Filtrar proyectos por categoría">
+          <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+            <span>Todos</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">
+            <span>Backend Java</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button class="filter-btn" data-filter="database" role="tab" aria-selected="false">
+            <span>Bases de Datos & SQL</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button class="filter-btn" data-filter="automation" role="tab" aria-selected="false">
+            <span>Automatización & IA</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false">
+            <span>Fullstack & Web</span>
+            <span class="filter-count">1</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Galería de Proyectos con Estructura Metodológica de 3 Puntos -->
+      <div class="projects__grid" id="projectsContainer">
+
+        <!-- ==========================================
+             PROYECTO 1: RapidExpress (Java Puro / MVC + DAO)
+             ========================================== -->
+        <article class="project-card interactive-spotlight fade-up" data-category="backend">
+          <div class="project-card__header-bar">
+            <span class="project-category mono">Backend · Java SE 21</span>
+            <span class="project-version-badge mono">v2.1.0-STABLE</span>
+          </div>
+
+          <div class="project-card__media">
+            <img src="assets/images/rapidexpress_diagram.png" alt="Diagrama de arquitectura y base de datos de RapidExpress" class="project-card__img" loading="lazy">
+            <div class="project-card__media-badge">
+              <span class="mono">100% Java Vanilla (Sin Frameworks)</span>
+            </div>
+          </div>
+
+          <div class="project-card__body">
+            <h3 class="project-card__title">RapidExpress – Sistema de Gestión Logística & Flotas</h3>
+            <p class="project-card__headline">
+              Plataforma de misión crítica en consola para la administración logística de flotas vehiculares, despacho dinámico de hojas de ruta y trazabilidad de paquetería.
+            </p>
+
+            <!-- Bloques Metodológicos Clave -->
+            <div class="evidence-blocks">
+              <!-- Contexto -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                  </svg>
+                  Contexto
+                </h4>
+                <p>
+                  Las empresas logísticas sufren sobrecostos e incidentes viales por vehículos sobrecargados y falta de trazabilidad en tiempo real de paquetes y conductores durante el despacho de rutas.
+                </p>
+              </div>
+
+              <!-- Mi Rol (Verbos de acción) -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Mi Rol (Ingeniería de Software)
+                </h4>
+                <ul class="role-bullets">
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Diseñé</strong> la arquitectura completa desacoplada bajo los patrones <strong>MVC</strong> (Modelo-Vista-Controlador) y <strong>DAO</strong> (Data Access Object) en Java SE 21 puro.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Implementé</strong> el acceso a base de datos mediante <strong>JDBC nativo</strong> con consultas parametrizadas (<span class="mono">PreparedStatement</span>) y transacciones manuales atómicas (commit/rollback).</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Programé</strong> el algoritmo de validación de pesos y capacidades volumétricas en tiempo real, bloqueando despachos que excedan la capacidad física del automotor.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Logré</strong> un subsistema de bitácoras de auditoría asíncronas con concurrencia nativa (<span class="mono">ExecutorService</span>) y persistencia persistente con Java NIO.2.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Resultados Tangibles -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Resultados Tangibles
+                </h4>
+                <div class="metrics-row">
+                  <div class="metric-pill">
+                    <span class="metric-value">0%</span>
+                    <span class="metric-label">Dependencias externas de terceros</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">100%</span>
+                    <span class="metric-label">Prevención de sobrepesos en despacho</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">&lt; 5ms</span>
+                    <span class="metric-label">Persistencia asíncrona de bitácora</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags del Stack -->
+            <div class="project-tags">
+              <span class="tech-tag">Java SE 21</span>
+              <span class="tech-tag">Patrón MVC</span>
+              <span class="tech-tag">Patrón DAO</span>
+              <span class="tech-tag">JDBC / MySQL</span>
+              <span class="tech-tag">ExecutorService</span>
+              <span class="tech-tag">Java NIO.2</span>
+            </div>
+
+            <!-- Acciones Interactivas -->
+            <div class="project-card__actions">
+              <a href="https://github.com/santiagopabonmolina/Proyecto_Java_Jubilona" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--primary">
+                <img src="assets/icons/github.svg" alt="" class="icon" width="16" height="16">
+                <span>Ver Código en GitHub</span>
+              </a>
+              <button class="btn btn--small btn--ghost copy-repo-btn" data-repo="https://github.com/santiagopabonmolina/Proyecto_Java_Jubilona.git" title="Copiar comando git clone">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Clonar</span>
+              </button>
+              <a href="assets/images/rapidexpress_diagram.png" target="_blank" class="btn btn--small btn--ghost">
+                <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span>Arquitectura</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROYECTO 2: COWORKING (MySQL Avanzado / Procedimientos / Triggers)
+             ========================================== -->
+        <article class="project-card interactive-spotlight fade-up" data-category="database">
+          <div class="project-card__header-bar">
+            <span class="project-category mono">Bases de Datos · MySQL 8.0</span>
+            <span class="project-version-badge mono">SQL-TUNED</span>
+          </div>
+
+          <div class="project-card__media project-card__media--sql">
+            <div class="sql-terminal-mock">
+              <div class="sql-terminal-bar">
+                <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+                <span class="sql-terminal-title mono">coworking_db.sql — MySQL Workbench</span>
+              </div>
+              <pre class="sql-terminal-code mono"><code><span class="sql-kw">DELIMITER</span> $$
+<span class="sql-kw">CREATE PROCEDURE</span> sp_registrar_reserva(
+  <span class="sql-kw">IN</span> p_usuario_id <span class="sql-type">INT</span>,
+  <span class="sql-kw">IN</span> p_espacio_id <span class="sql-type">INT</span>,
+  <span class="sql-kw">IN</span> p_inicio <span class="sql-type">DATETIME</span>
+)
+<span class="sql-kw">BEGIN</span>
+  <span class="sql-comment">-- Validación atómica de solapamientos con EXPLAIN</span>
+  <span class="sql-kw">SELECT COUNT</span>(*) <span class="sql-kw">INTO</span> @solapado <span class="sql-kw">FROM</span> reservas ...
+<span class="sql-kw">END</span> $$</code></pre>
+            </div>
+          </div>
+
+          <div class="project-card__body">
+            <h3 class="project-card__title">Gestión de Coworking & Oficinas Compartidas</h3>
+            <p class="project-card__headline">
+              Diseño integral de base de datos relacional para la administración automatizada de espacios de trabajo, facturación, control de accesos por credenciales y membresías.
+            </p>
+
+            <!-- Bloques Metodológicos Clave -->
+            <div class="evidence-blocks">
+              <!-- Contexto -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                  </svg>
+                  Contexto
+                </h4>
+                <p>
+                  Los centros de coworking enfrentan problemas de doble reserva en salas de reuniones, liquidación errónea de horas adicionales y falta de control de aforo por falta de mecanismos automáticos en el motor relacional.
+                </p>
+              </div>
+
+              <!-- Mi Rol (Verbos de acción) -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Mi Rol (Diseño de Datos & SQL)
+                </h4>
+                <ul class="role-bullets">
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Diseñé</strong> y normalicé el esquema relacional en 3FN con más de 12 entidades interconectadas y restricciones de integridad referencial (<span class="mono">FOREIGN KEYS</span>).</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Implementé</strong> procedimientos almacenados transaccionales (<span class="mono">STORED PROCEDURES</span>) y funciones SQL determinísticas para liquidación de facturación y reservas.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Configuré</strong> disparadores (<span class="mono">TRIGGERS</span>) para auditoría de cambios en membresías y eventos automáticos programados (<span class="mono">EVENTS</span>) de corte mensual.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Optimicé</strong> consultas analíticas complejas mediante índices compuestos y análisis sistemático con la herramienta <span class="mono">EXPLAIN</span>.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Resultados Tangibles -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Resultados Tangibles
+                </h4>
+                <div class="metrics-row">
+                  <div class="metric-pill">
+                    <span class="metric-value">100%</span>
+                    <span class="metric-label">Eliminación de reservas duplicadas</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">12+</span>
+                    <span class="metric-label">Procedimientos & triggers activos</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">3 Niveles</span>
+                    <span class="metric-label">Roles y permisos de seguridad (DBA, Operativo, Auditor)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags del Stack -->
+            <div class="project-tags">
+              <span class="tech-tag">MySQL 8.0</span>
+              <span class="tech-tag">Stored Procedures</span>
+              <span class="tech-tag">Triggers</span>
+              <span class="tech-tag">MySQL Events</span>
+              <span class="tech-tag">EXPLAIN Tuning</span>
+              <span class="tech-tag">Roles & Grants</span>
+            </div>
+
+            <!-- Acciones -->
+            <div class="project-card__actions">
+              <a href="https://github.com/santiagopabonmolina/COWORKING" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--primary">
+                <img src="assets/icons/github.svg" alt="" class="icon" width="16" height="16">
+                <span>Ver Scripts SQL en GitHub</span>
+              </a>
+              <button class="btn btn--small btn--ghost copy-repo-btn" data-repo="https://github.com/santiagopabonmolina/COWORKING.git" title="Copiar comando git clone">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Clonar</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROYECTO 3: Sistema Académico con n8n & Telegram IA (La Jubilona)
+             ========================================== -->
+        <article class="project-card interactive-spotlight fade-up" data-category="automation">
+          <div class="project-card__header-bar">
+            <span class="project-category mono">Automatización · n8n & IA</span>
+            <span class="project-version-badge mono">PIPELINE-LIVE</span>
+          </div>
+
+          <div class="project-card__media project-card__media--n8n">
+            <div class="workflow-diagram-mock">
+              <div class="workflow-badge mono">n8n Workflow Engine</div>
+              <div class="workflow-nodes">
+                <div class="wf-node">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+                  <span>Webhook</span>
+                </div>
+                <div class="wf-arrow">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+                <div class="wf-node">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  <span>JS Logic</span>
+                </div>
+                <div class="wf-arrow">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+                <div class="wf-node wf-node--ai">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><line x1="12" y1="7" x2="12" y2="11"/></svg>
+                  <span>AI Agent (Telegram)</span>
+                </div>
+                <div class="wf-arrow">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+                <div class="wf-node">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                  <span>Sheets DB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card__body">
+            <h3 class="project-card__title">Gestión Académica Inteligente con n8n & IA</h3>
+            <p class="project-card__headline">
+              Flujo automatizado de extremo a extremo que procesa calificaciones, clasifica estudiantes por rendimiento y permite consultas conversacionales mediante un bot de Telegram impulsado por IA.
+            </p>
+
+            <!-- Bloques Metodológicos Clave -->
+            <div class="evidence-blocks">
+              <!-- Contexto -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                  </svg>
+                  Contexto
+                </h4>
+                <p>
+                  El registro y cálculo manual de notas académicas consume decenas de horas administrativas y retrasa la atención a consultas de estudiantes sobre sus habilitaciones y estado de materias.
+                </p>
+              </div>
+
+              <!-- Mi Rol (Verbos de acción) -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Mi Rol (Automatización & AI Integration)
+                </h4>
+                <ul class="role-bullets">
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Implementé</strong> el webhook de ingesta y nodos de validación en JavaScript para verificar formato y rangos de notas académicas automáticamente.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Diseñé</strong> la bifurcación lógica condicional (Switch) que segrega estudiantes en cohortes (Aprobados, Habilitación, Reprobados) y actualiza Google Sheets en tiempo real.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Coordiné</strong> la conexión del Agente de Inteligencia Artificial (OpenRouter AI) con memoria conversacional vinculado a la API de Telegram.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Logré</strong> habilitar consultas inmediatas en lenguaje natural sobre notas y estados académicos directamente desde un chat de Telegram.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Resultados Tangibles -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Resultados Tangibles
+                </h4>
+                <div class="metrics-row">
+                  <div class="metric-pill">
+                    <span class="metric-value">95%</span>
+                    <span class="metric-label">Reducción de tiempo en reporte de notas</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">24 / 7</span>
+                    <span class="metric-label">Disponibilidad de consultas en Telegram</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">0 errores</span>
+                    <span class="metric-label">En clasificación y cálculo de promedios</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags del Stack -->
+            <div class="project-tags">
+              <span class="tech-tag">n8n</span>
+              <span class="tech-tag">OpenRouter AI</span>
+              <span class="tech-tag">Telegram Bot API</span>
+              <span class="tech-tag">Webhooks HTTP</span>
+              <span class="tech-tag">Google Sheets API</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+
+            <!-- Acciones -->
+            <div class="project-card__actions">
+              <a href="https://github.com/santiagopabonmolina/La_Jubilona" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--primary">
+                <img src="assets/icons/github.svg" alt="" class="icon" width="16" height="16">
+                <span>Ver Flujo n8n en GitHub</span>
+              </a>
+              <button class="btn btn--small btn--ghost copy-repo-btn" data-repo="https://github.com/santiagopabonmolina/La_Jubilona.git" title="Copiar comando git clone">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Clonar</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROYECTO 4: MusicStream (los-psicoactivos-sounds)
+             ========================================== -->
+        <article class="project-card interactive-spotlight fade-up" data-category="frontend">
+          <div class="project-card__header-bar">
+            <span class="project-category mono">Fullstack & Web · E-Commerce</span>
+            <span class="project-version-badge mono">v1.2.0-UI</span>
+          </div>
+
+          <div class="project-card__media">
+            <img src="assets/images/musicstream_preview.png" alt="Vista previa de interfaz de MusicStream Digital Store" class="project-card__img" loading="lazy">
+            <div class="project-card__media-badge">
+              <span class="mono">Arquitectura CSS Modular</span>
+            </div>
+          </div>
+
+          <div class="project-card__body">
+            <h3 class="project-card__title">MusicStream – Digital Music Store & Player</h3>
+            <p class="project-card__headline">
+              Tienda digital interactiva y plataforma de streaming para exploración de álbumes de artistas independientes, reproducción de pistas, carrito de compras y checkout.
+            </p>
+
+            <!-- Bloques Metodológicos Clave -->
+            <div class="evidence-blocks">
+              <!-- Contexto -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                  </svg>
+                  Contexto
+                </h4>
+                <p>
+                  Necesidad de crear una interfaz inmersiva y de alto rendimiento que combine catálogo de música, reproductor de audio continuo y flujo transaccional de compra sin sobrecargar dependencias de frameworks pesados.
+                </p>
+              </div>
+
+              <!-- Mi Rol (Verbos de acción) -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Mi Rol (Desarrollo Frontend & UI/UX)
+                </h4>
+                <ul class="role-bullets">
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Diseñé</strong> la arquitectura CSS modular basada en componentes reutilizables (tarjetas de álbumes, reproductores, migas de pan y pasarela).</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Implementé</strong> la interactividad del reproductor de sonido con control de volumen, avance de pista y persistencia visual inferior.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Coordiné</strong> la navegación del carrito de compras y la pantalla de checkout para una experiencia fluida e intuitiva.</span>
+                  </li>
+                  <li>
+                    <svg class="bullet-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span><strong>Logré</strong> un diseño 100% responsivo probado y adaptado para dispositivos móviles, tablets y computadores de escritorio.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Resultados Tangibles -->
+              <div class="evidence-block">
+                <h4 class="evidence-title">
+                  <svg class="evidence-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Resultados Tangibles
+                </h4>
+                <div class="metrics-row">
+                  <div class="metric-pill">
+                    <span class="metric-value">100%</span>
+                    <span class="metric-label">Diseño adaptable sin frameworks pesados</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">5 Vistas</span>
+                    <span class="metric-label">Flujo integral (Home, Detalle, Player, Cart, Checkout)</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-value">&lt; 1s</span>
+                    <span class="metric-label">Tiempo de renderizado inicial</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags del Stack -->
+            <div class="project-tags">
+              <span class="tech-tag">HTML5 Semántico</span>
+              <span class="tech-tag">CSS3 Modular</span>
+              <span class="tech-tag">JavaScript ES6+</span>
+              <span class="tech-tag">Audio API</span>
+              <span class="tech-tag">Responsive UI</span>
+            </div>
+
+            <!-- Acciones -->
+            <div class="project-card__actions">
+              <a href="https://github.com/JhonHenryReyesPerez/los-psicoactivos-sounds.git" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--primary">
+                <img src="assets/icons/github.svg" alt="" class="icon" width="16" height="16">
+                <span>Ver Repositorio GitHub</span>
+              </a>
+              <button class="btn btn--small btn--ghost copy-repo-btn" data-repo="https://github.com/JhonHenryReyesPerez/los-psicoactivos-sounds.git" title="Copiar comando git clone">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Clonar</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTACTO Y CONVERSIÓN: EL PUENTE
+         ======================================================== -->
+    <section class="section contact" id="contacto">
+      <div class="contact__container fade-up">
+        
+        <!-- Tarjeta de Conversión Principal con Descarga de CV -->
+        <div class="conversion-card interactive-spotlight">
+          <div class="conversion-card__content">
+            <span class="eyebrow">Conversión & Próximos Pasos</span>
+            <h2 class="conversion-card__title">¿Listo para sumar talento técnico a tu equipo?</h2>
+            <p class="conversion-card__lead">
+              Mi objetivo es aportar soluciones inmediatas en desarrollo backend, arquitectura de datos y automatizaciones que generen valor real desde el primer día.
+            </p>
+            <div class="conversion-card__actions">
+              <a href="assets/docs/Hoja_de_vida_Santiago_Pabon.pdf" download="Hoja_de_vida_Santiago_Pabon.pdf" class="btn btn--primary btn--large" id="footerCvDownload">
+                <svg class="icon icon--btn" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Descargar Hoja de Vida (PDF)</span>
+              </a>
+
+              <a href="https://wa.me/573154189394?text=Hola%20Santiago,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--large" title="Escribirme directamente por WhatsApp">
+                <svg class="icon icon--btn" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 .8C5.8.8.8 5.8.8 12c0 2.1.6 4.1 1.6 5.8L.8 23.2l5.6-1.5A11.1 11.1 0 0 0 12 23.2c6.2 0 11.2-5 11.2-11.2S18.2.8 12 .8zm0 20.3c-1.9 0-3.6-.5-5.2-1.4l-.4-.2-3.3.9.9-3.2-.2-.4A9.2 9.2 0 1 1 21.2 12 9.2 9.2 0 0 1 12 21.1zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.2-.6.9-.8 1-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.3-.5-.3h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.5 2.3 3.7 3.1 2.2.8 2.2.6 2.6.5.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1z"/>
+                </svg>
+                <span>Chatear por WhatsApp</span>
+              </a>
+
+              <button class="btn btn--ghost btn--large" id="sharePortfolioBtn" title="Copiar enlace de este portafolio">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
+                <span id="shareBtnText">Compartir Portafolio</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canales Directos e Interactivos con Iconografía Vectorial Nítida -->
+        <div class="channels-section">
+          <div class="section__head">
+            <span class="eyebrow">Canales Directos</span>
+            <h3 class="channels-title">Contacto Rápido & Redes Profesionales</h3>
+          </div>
+
+          <div class="channels-grid">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/573154189394?text=Hola%20Santiago,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="channel-card channel-card--whatsapp interactive-spotlight">
+              <div class="channel-card__icon channel-card__icon--whatsapp">
+                <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M12 .8C5.8.8.8 5.8.8 12c0 2.1.6 4.1 1.6 5.8L.8 23.2l5.6-1.5A11.1 11.1 0 0 0 12 23.2c6.2 0 11.2-5 11.2-11.2S18.2.8 12 .8zm0 20.3c-1.9 0-3.6-.5-5.2-1.4l-.4-.2-3.3.9.9-3.2-.2-.4A9.2 9.2 0 1 1 21.2 12 9.2 9.2 0 0 1 12 21.1zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.2-.6.9-.8 1-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.3-.5-.3h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.5 2.3 3.7 3.1 2.2.8 2.2.6 2.6.5.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1z"/>
+                </svg>
+              </div>
+              <div class="channel-card__info">
+                <span class="channel-card__type mono">WhatsApp Directo</span>
+                <span class="channel-card__value">+57 315 418 9394</span>
+                <span class="channel-card__status">
+                  <span class="live-dot live-dot--whatsapp" aria-hidden="true"></span>
+                  <span>En línea para mensajes</span>
+                </span>
+              </div>
+              <svg class="channel-card__arrow-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+
+            <!-- Correo Electrónico -->
+            <div class="channel-card channel-card--interactive interactive-spotlight" id="emailCard">
+              <a href="mailto:santy122324@gmail.com" class="channel-card__link-wrap">
+                <div class="channel-card__icon channel-card__icon--email">
+                  <img src="assets/icons/mail.svg" alt="Correo" class="icon" width="26" height="26">
+                </div>
+                <div class="channel-card__info">
+                  <span class="channel-card__type mono">Correo Electrónico</span>
+                  <span class="channel-card__value" id="emailAddress">santy122324@gmail.com</span>
+                  <span class="channel-card__status">Respuesta habitual en &lt; 24h</span>
+                </div>
+              </a>
+              <button class="channel-card__copy-btn" id="copyEmailBtn" aria-label="Copiar correo" title="Copiar correo al portapapeles">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                <span class="copy-tooltip" id="copyTooltip">¡Copiado!</span>
+              </button>
+            </div>
+
+            <!-- GitHub -->
+            <a href="https://github.com/santiagopabonmolina/" target="_blank" rel="noopener noreferrer" class="channel-card interactive-spotlight">
+              <div class="channel-card__icon channel-card__icon--github">
+                <img src="assets/icons/github.svg" alt="GitHub" class="icon" width="26" height="26">
+              </div>
+              <div class="channel-card__info">
+                <span class="channel-card__type mono">GitHub Perfil</span>
+                <span class="channel-card__value">@santiagopabonmolina</span>
+                <span class="channel-card__status">Repositorios & código abierto</span>
+              </div>
+              <svg class="channel-card__arrow-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/santiago-pabon-molina/" target="_blank" rel="noopener noreferrer" class="channel-card interactive-spotlight">
+              <div class="channel-card__icon channel-card__icon--linkedin">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="icon" width="26" height="26">
+              </div>
+              <div class="channel-card__info">
+                <span class="channel-card__type mono">LinkedIn</span>
+                <span class="channel-card__value">Santiago Pabón Molina</span>
+                <span class="channel-card__status">Red profesional & conexiones</span>
+              </div>
+              <svg class="channel-card__arrow-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Mensaje Directo Rápido / Mini Formulario -->
+          <div class="quick-contact-box interactive-spotlight">
+            <h4 class="quick-contact-title">¿Tienes una propuesta o consulta técnica puntual?</h4>
+            <p class="quick-contact-subtitle">Envíame un mensaje rápido y te responderé en breve:</p>
+            <form id="quickContactForm" class="quick-form">
+              <div class="quick-form__row">
+                <input type="text" id="contactName" placeholder="Tu nombre o empresa" required class="form-input">
+                <input type="email" id="contactEmail" placeholder="Tu correo de contacto" required class="form-input">
+              </div>
+              <textarea id="contactMessage" rows="3" placeholder="Describe brevemente el proyecto o vacante técnica..." required class="form-input form-textarea"></textarea>
+              <div class="quick-form__footer">
+                <button type="submit" class="btn btn--whatsapp btn--submit" id="submitContactBtn">
+                  <span>Enviar Mensaje por WhatsApp</span>
+                  <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 .8C5.8.8.8 5.8.8 12c0 2.1.6 4.1 1.6 5.8L.8 23.2l5.6-1.5A11.1 11.1 0 0 0 12 23.2c6.2 0 11.2-5 11.2-11.2S18.2.8 12 .8zm0 20.3c-1.9 0-3.6-.5-5.2-1.4l-.4-.2-3.3.9.9-3.2-.2-.4A9.2 9.2 0 1 1 21.2 12 9.2 9.2 0 0 1 12 21.1zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.2-.6.9-.8 1-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.3-.5-.3h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.5 2.3 3.7 3.1 2.2.8 2.2.6 2.6.5.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1z"/>
+                  </svg>
+                </button>
+                <div class="quick-form__note mono">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" class="shield-icon">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  <span>Envío directo y seguro mediante enlace directo cifrado.</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>&copy; <span id="year"></span> Santiago Pabón. Todos los derechos reservados.</p>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="navbar__brand">
+          <span class="brand-badge">SP</span>
+          <span class="brand-text">santiago<span class="accent">.pabon</span></span>
+        </a>
+        <p class="footer__tagline">
+          Desarrollo Full Stack con excelencia backend, consistencia de datos y automatización aplicada.
+        </p>
+      </div>
+
+      <div class="footer__nav">
+        <span class="footer__nav-title mono">Navegación</span>
+        <ul>
+          <li><a href="#hero">Identidad & Superpoder</a></li>
+          <li><a href="#servicios">Servicios Estrella</a></li>
+          <li><a href="#respaldo">Cinta de Respaldo</a></li>
+          <li><a href="#proyectos">Proyectos & Evidencia</a></li>
+          <li><a href="#contacto">Contacto & CV</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__docs">
+        <span class="footer__nav-title mono">Recursos</span>
+        <ul>
+          <li><a href="assets/docs/Hoja_de_vida_Santiago_Pabon.pdf" download="Hoja_de_vida_Santiago_Pabon.pdf" class="accent-link">Descargar Hoja de Vida (PDF)</a></li>
+          <li><a href="https://github.com/santiagopabonmolina/" target="_blank" rel="noopener noreferrer">Repositorios GitHub</a></li>
+          <li><a href="https://wa.me/573154189394" target="_blank" rel="noopener noreferrer">WhatsApp Directo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="year">2026</span> Santiago Pabón Molina. Diseñado y construido con altos estándares de UI/UX contemporánea.</p>
+    </div>
   </footer>
 
   <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
-  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-    <img src="assets/icons/arrow-up.svg" alt="">
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba de la página" title="Volver al inicio">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"/>
+      <polyline points="5 12 12 5 19 12"/>
+    </svg>
   </button>
 
   <script src="js/script.js"></script>
